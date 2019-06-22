@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sony.bigcommerce.demo.dao.mappers.TbBcAuthMapper" >
+    <!--<cache />-->
+    <resultMap id="tbBcAuth" type="com.sony.bigcommerce.demo.dao.to.TbBcAuth" >
+        <id column="id" property="id" jdbcType="INTEGER" />
+        <result column="user_name" property="userName" jdbcType="VARCHAR" />
+        <result column="access_token" property="accessToken" jdbcType="VARCHAR" />
+        <result column="user_email" property="useremail" jdbcType="VARCHAR" />
+        <result column="scope" property="scope" jdbcType="VARCHAR" />
+       <result column="context" property="context" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="findAll" resultMap="tbBcAuth">
+        select id,user_name,access_token, user_email, scope, context from tb_bc_auth
+    </select>
+    <insert id="insert" >
+    insert into tb_bc_auth (id,user_name,access_token,user_email,scope,context )
+  values (#{id},#{userName},#{accessToken},#{useremail},#{scope}, #{context})
+    </insert>
+    <delete id="delete" parameterType="com.sony.bigcommerce.demo.dao.to.TbBcAuth" >
+    delete from tb_bc_auth where id= #{id}
+    </delete>
+</mapper>

@@ -3,7 +3,7 @@ This is Bigcommerce sample apps using spriing boot and java 8
 
 
 
-### Technical slack
+### Technical stack
 
 1. Mybatis
 2. Embedded H2 database
