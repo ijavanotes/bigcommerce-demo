@@ -29,7 +29,25 @@ with below configurations( it's able to find from https://devtools.bigcommerce.c
 bcClientId: <client id from bc when create apps>
 bcClientSecret: <client scret from bc when create apps>
 
-crmAppUrl: <its your application public url(https) local testing use ngrock.io>
+crmAppUrl: <its your application public url(https) local testing use ngrock.io  with port  8080>
+
+
+
+
+
+### Database Access
+
+http://localhost:8080//h2-console
+
+
+
+
+
+
+
+
+
+
 
 
 
